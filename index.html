@@ -12,10 +12,35 @@
     </style>
 </head>
 <body>
+    <div id="map-container"></div> <!-- 지도를 표시할 div --><!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 지도</title>
+</head>
+<body>
     <div id="map-container"></div> <!-- 지도를 표시할 div -->
     
     <!-- 카카오 지도 API 추가 -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=edbd3eeb45f5bdbfa57f067750244ad9"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=edbd3eeb45f5bdbfa57f067750244ad9"></script>
+    <script>
+        window.onload = function() {
+            var container = document.getElementById('map-container'); // 지도 표시할 div
+            var options = {
+                center: new kakao.maps.LatLng(37.5665, 126.9780), // 지도의 중심 좌표 (서울 시청)
+                level: 3 // 지도의 확대 레벨
+            };
+
+            // 지도 생성
+            var map = new kakao.maps.Map(container, options);
+        };
+    </script>
+</body>
+</html>
+    
+    <!-- 카카오 지도 API 추가 -->
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=edbd3eeb45f5bdbfa57f067750244ad9"></script>
     <script>
         // 지도 표시할 div와 지도 옵션 설정
         var container = document.getElementById('map-container'); // 지도 표시할 div
