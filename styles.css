@@ -1,12 +1,1 @@
-#map-container {
-    width: 100%;
-    height: 400px;
-    min-height: 300px; /* 최소 높이 설정 */
-}
 
-@media screen and (max-width: 768px) {
-    #map-container {
-        height: 300px; /* 모바일에서는 300px로 조정 */
-        min-height: 300px;
-    }
-}
